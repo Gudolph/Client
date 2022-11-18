@@ -1,11 +1,24 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import styles from "../css/Home.module.css";
 
 const Home = () => {
   return (
-    <div>
-      <h1>연말 캘린더</h1>
-      <button type="button">로그인/로그아웃</button>
-      <button type="button">시작하기</button>
+    <div id={styles.home}>
+      <h1 id={styles.title}>
+        2022 Self <br />
+        Advent Calender
+      </h1>
+      <div id={styles.gologin}>
+        <Link to="login">
+          <button type="button" id={styles.loginBT}>
+            로그인
+          </button>
+        </Link>
+        <Link to="/signup">
+          <span id={styles.signupLink}>회원가입</span>
+        </Link>
+      </div>
     </div>
   );
 };

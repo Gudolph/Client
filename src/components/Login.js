@@ -22,10 +22,10 @@ const Login = () => {
         password: password,
       });
       dispatch(setToken(data.jwt));
-      <h1>로그인 성공</h1>;
+      alert("환영합니다");
       setTimeout(() => {
         navigate("/");
-      }, 2000);
+      }, 1000);
     } catch (e) {
       console.log(e.response.data);
     }

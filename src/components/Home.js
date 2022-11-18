@@ -1,11 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <div>
-      <h1>연말 캘린더</h1>
-      <button type="button">로그인/로그아웃</button>
-      <button type="button">시작하기</button>
+      <h1>2022 Self Advent Calender</h1>
+      <Link to="login">
+        <button type="button">로그인</button>
+      </Link>
+      <Link to="/signup">회원가입</Link>
     </div>
   );
 };

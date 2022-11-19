@@ -11,6 +11,6 @@
     box-sizing: border-box;
     background-color: #810006;
     padding: 20px;
-    height: 100vh;
+    min-height: 100%;
 }
 

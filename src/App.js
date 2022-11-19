@@ -16,6 +16,7 @@ const App = () => {
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         {/* 인증이 필요한 컴포넌트느 PrivateRoute 컴포넌트를 사용한다. */}
+        <Route path="/calender" element={<Calender />} />
       </Routes>
     </div>
   );

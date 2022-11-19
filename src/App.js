@@ -4,7 +4,6 @@ import Home from "./components/Home";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
 import Mypage from "./components/MyPage";
-import Calender from "./components/Calender";
 import PrivateRoute from "./routes/PrivateRoute";
 import styles from "./css/App.module.css";
 import "./css/reset.css";
@@ -21,7 +20,6 @@ const App = () => {
           path="/mypage"
           element={<PrivateRoute path="/mypage" component={Mypage} />}
         />
-        <Route path="/calender" element={<Calender />} />
       </Routes>
     </div>
   );

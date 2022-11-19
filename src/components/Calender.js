@@ -10,31 +10,30 @@ const Calender = () => {
         Advent Calender
       </h1>
         <div id={styles.calender_grid}>
-            <div class="item">1</div>
-            <div class="item">2</div>
-            <div class="item">3</div>
-            <div class="item">4</div>
-            <div class="item">5</div>
-            <div class="item">6</div>
-            <div class="item">7</div>
-            <div class="item">8</div>
-            <div class="item">9</div>
-            <div class="item">10</div>
-            <div class="item">11</div>
-            <div class="item">12</div>
-            <div class="item">13</div>
-            <div class="item">14</div>
-            <div class="item">15</div>
-            <div class="item">16</div>
-            <div class="item">17</div>
-            <div class="item">18</div>
-            <div class="item">19</div>
-            <div class="item">20</div>
-            <div class="item">21</div>
-            <div class="item">22</div>
-            <div class="item">23</div>
-            <div class="item">24</div>
-
+            <div className={styles.item}>1</div>
+            <div className={styles.item}>2</div>
+            <div className={styles.item}>3</div>
+            <div className={styles.item}>4</div>
+            <div className={styles.item}>5</div>
+            <div className={styles.item}>6</div>
+            <div className={styles.item}>7</div>
+            <div className={styles.item}>8</div>
+            <div className={styles.item}>9</div>
+            <div className={styles.item}>10</div>
+            <div className={styles.item}>11</div>
+            <div className={styles.item}>12</div>
+            <div className={styles.item}>13</div>
+            <div className={styles.item}>14</div>
+            <div className={styles.item}>15</div>
+            <div className={styles.item}>16</div>
+            <div className={styles.item}>17</div>
+            <div className={styles.item}>18</div>
+            <div className={styles.item}>19</div>
+            <div className={styles.item}>20</div>
+            <div className={styles.item}>21</div>
+            <div className={styles.item}>22</div>
+            <div className={styles.item}>23</div>
+            <div className={styles.item}>24</div>
         </div>
     </div>
   );

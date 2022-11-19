@@ -11,7 +11,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const [cookies, setCookie] = useCookies(["username"]); //쿠키
+  const [cookies, setCookie] = useCookies(["cookies"]); //쿠키
   //const [searchParams, setSearchParams] = useSearchParams();
   const submit = async (e) => {
     e.preventDefault();
@@ -24,14 +24,18 @@ const Login = () => {
         })
         .then((res) => {
           console.log("성공");
-          setCookie("username", res.data.token); //쿠키에 토큰 저장
+          console.log(res.data);
+          //username: res.data.user.username
+          //email: res.data.user.email
+          setCookie("cookies", res.data.access_token); //쿠키에 토큰 저장
         });
       console.log(cookies);
       alert("환영합니다");
       setTimeout(() => {
-        navigate("/");
+        navigate("/userHome");
       }, 1000);
     } catch (e) {
+      alert("로그인을 다시 시도해주십시오.");
       console.log(e.response.data);
     }
   };

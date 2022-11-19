@@ -41,7 +41,7 @@ const LetterForm = () => {
           </label>
           <textarea type="text" name="nickname"></textarea>
         </p>
-        <button type="button">메세지 작성하기</button>
+        <button type="button" className={styles.LinkBT} >메세지 작성하기</button>
       </div>
     </div>
   );

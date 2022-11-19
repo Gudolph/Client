@@ -5,6 +5,7 @@ import Signup from "./components/Signup";
 import Login from "./components/Login";
 import LetterForm from "./components/LetterForm";
 import CreateCalender from "./components/CreateCalender";
+import Calender from "./components/calender";
 import styles from "./css/App.module.css";
 
 import "./css/reset.css";
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/create" element={<CreateCalender />} />
         <Route path="/letterform" element={<LetterForm />} />
         <Route path="/userHome" element={<CustomHome1130 />} />
+        <Route path="/calender" element={<Calender />} />
       </Routes>
     </div>
   );

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 //css
 import styles from "../css/LetterForm.module.css";
 
@@ -41,7 +42,9 @@ const LetterForm = () => {
           </label>
           <textarea type="text" name="nickname"></textarea>
         </p>
+        <Link to="/calender">
         <button type="button" className={styles.LinkBT} >메세지 작성하기</button>
+        </Link>
       </div>
     </div>
   );

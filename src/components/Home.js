@@ -18,11 +18,6 @@ const Home = () => {
         <Link to="/signup">
           <span id={styles.signupLink}>회원가입</span>
         </Link>
-        <Link to="/calender">
-        <button type="button" id={styles.loginBT}>
-            Calender
-          </button>
-        </Link>
       </div>
     </div>
   );

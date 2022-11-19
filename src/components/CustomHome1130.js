@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
+import Copy from "../components/Copy";
 //css
 import styles from "../css/Customhome.module.css";
 
@@ -33,9 +34,10 @@ const CustomHome1130 = () => {
       <div id={styles.countcontent}>
         <span>{countLetter}</span>/<span>{totalLetter}</span>
         {/* 배포시 링크 연결 */}
-        <button type="button" id={styles.LinkBT}>
+        {/* <button type="button" id={styles.LinkBT}>
           링크공유해서 메세지 받기
-        </button>
+        </button> */}
+        <Copy />
       </div>
     </div>
   );

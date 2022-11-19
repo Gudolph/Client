@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
 import Mypage from "./components/MyPage";
+import Calender from "./components/Calender";
 import styles from "./css/App.module.css";
 import "./css/reset.css";
 

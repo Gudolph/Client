@@ -14,7 +14,7 @@ function Copy() {
 
   return (
     <div className='Copy'>
-      <button id={styles.LinkBT} onClick={() => handleCopyClipBoard('google.com')}>
+      <button id={styles.LinkBT} onClick={() => handleCopyClipBoard("http://localhost:3000/letterform")}>
        링크 공유해서 메세지 받기
       </button>
     </div>

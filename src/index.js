@@ -5,11 +5,11 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
-import store from "./config/config";
+import store from "./redux/configStore";
 import { PersistGate } from "redux-persist/integration/react";
 import persistStore from "redux-persist/es/persistStore";
 
-const persistor = persistStore(store)
+const persistor = persistStore(store);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -18,7 +18,7 @@ root.render(
       <BrowserRouter>
         <App />
       </BrowserRouter>
-   </PersistGate>
+    </PersistGate>
   </Provider>
 );
 

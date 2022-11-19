@@ -1,18 +1,19 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setToken } from "../redux/reducers/AuthReducer";
+//css
+import styles from "../css/Login.module.css";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const [searchParams, setSearchParams] = useSearchParams();
+  //const [searchParams, setSearchParams] = useSearchParams();
   const dispatch = useDispatch();
-
   const submit = async (e) => {
     e.preventDefault();
     try {
@@ -45,11 +46,14 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h1>로그인 페이지</h1>
-      <form onSubmit={submit}>
-        <p>
-          <label htmlFor="username">username: </label>
+    <div id={styles.home}>
+      <h1 id={styles.title}>
+        2022 Self <br />
+        Advent Calender
+      </h1>
+      <form onSubmit={submit} id={styles.loginform}>
+        <p class={styles.formelement}>
+          <label htmlFor="username">아이디를 입력해주세요</label>
           <input
             type="text"
             name="username"
@@ -57,8 +61,8 @@ const Login = () => {
             onChange={handleChange}
           ></input>
         </p>
-        <p>
-          <label htmlFor="email">email: </label>
+        <p class={styles.formelement}>
+          <label htmlFor="email">이메일을 입력해주세요</label>
           <input
             type="text"
             name="email"
@@ -66,16 +70,18 @@ const Login = () => {
             onChange={handleChange}
           ></input>
         </p>
-        <p>
-          <label htmlFor="password1">password: </label>
+        <p class={styles.formelement}>
+          <label htmlFor="password1">비밀번호를 입력해주세요</label>
           <input
-            type="text"
+            type="password"
             name="password"
             value={password}
             onChange={handleChange}
           ></input>
         </p>
-        <button type="submit">Log in</button>
+        <button type="submit" id={styles.loginBT}>
+          로그인
+        </button>
       </form>
     </div>
   );

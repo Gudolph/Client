@@ -2,8 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { setToken } from "../redux/reducers/AuthReducer";
+import { useCookies } from "react-cookie";
 //css
 import styles from "../css/Login.module.css";
 
@@ -12,17 +11,22 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  const [cookies, setCookie] = useCookies(["username"]); //쿠키
   //const [searchParams, setSearchParams] = useSearchParams();
-  const dispatch = useDispatch();
   const submit = async (e) => {
     e.preventDefault();
     try {
-      const data = await axios.post("http://127.0.0.1:8000/accounts/login/", {
-        username: username,
-        email: email,
-        password: password,
-      });
-      dispatch(setToken(data.jwt));
+      await axios
+        .post("http://127.0.0.1:8000/accounts/login/", {
+          username: username,
+          email: email,
+          password: password,
+        })
+        .then((res) => {
+          console.log("성공");
+          setCookie("username", res.data.token); //쿠키에 토큰 저장
+        });
+      console.log(cookies);
       alert("환영합니다");
       setTimeout(() => {
         navigate("/");
@@ -52,7 +56,7 @@ const Login = () => {
         Advent Calender
       </h1>
       <form onSubmit={submit} id={styles.loginform}>
-        <p class={styles.formelement}>
+        <p className={styles.formelement}>
           <label htmlFor="username">아이디를 입력해주세요</label>
           <input
             type="text"
@@ -61,7 +65,7 @@ const Login = () => {
             onChange={handleChange}
           ></input>
         </p>
-        <p class={styles.formelement}>
+        <p className={styles.formelement}>
           <label htmlFor="email">이메일을 입력해주세요</label>
           <input
             type="text"
@@ -70,7 +74,7 @@ const Login = () => {
             onChange={handleChange}
           ></input>
         </p>
-        <p class={styles.formelement}>
+        <p className={styles.formelement}>
           <label htmlFor="password1">비밀번호를 입력해주세요</label>
           <input
             type="password"

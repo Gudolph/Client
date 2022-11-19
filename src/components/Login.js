@@ -27,7 +27,7 @@ const Login = () => {
           console.log(res.data);
           //username: res.data.user.username
           //email: res.data.user.email
-          setCookie("cookies", res.data.access_token); //쿠키에 토큰 저장
+          setCookie("cookies", res.data); //쿠키에 토큰 저장
         });
       console.log(cookies);
       alert("환영합니다");

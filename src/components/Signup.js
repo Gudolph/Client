@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+//css
+import styles from "../css/Signup.module.css";
 
 const Signup = () => {
   const [username, setUsername] = useState("");
@@ -49,11 +51,14 @@ const Signup = () => {
   };
 
   return (
-    <div>
-      <h1>회원가입 페이지</h1>
-      <form onSubmit={handleSubmit}>
-        <p>
-          <label htmlFor="username">username: </label>
+    <div id={styles.home}>
+      <h1 id={styles.title}>
+        2022 Self <br />
+        Advent Calender
+      </h1>
+      <form onSubmit={handleSubmit} id={styles.signform}>
+        <p className={styles.formelement}>
+          <label htmlFor="username">아이디를 입력해주세요</label>
           <input
             type="text"
             name="username"
@@ -61,8 +66,8 @@ const Signup = () => {
             onChange={handleChange}
           ></input>
         </p>
-        <p>
-          <label htmlFor="email">email: </label>
+        <p className={styles.formelement}>
+          <label htmlFor="email">이메일을 입력해주세요</label>
           <input
             type="text"
             name="email"
@@ -70,25 +75,27 @@ const Signup = () => {
             onChange={handleChange}
           ></input>
         </p>
-        <p>
-          <label htmlFor="password1">password1: </label>
+        <p className={styles.formelement}>
+          <label htmlFor="password1">비밀번호를 입력해주세요</label>
           <input
-            type="text"
+            type="password"
             name="password1"
             value={password1}
             onChange={handleChange}
           ></input>
         </p>
-        <p>
-          <label htmlFor="password2">password2: </label>
+        <p className={styles.formelement}>
+          <label htmlFor="password2">비밀번호를 다시 한번 입력해 주세요</label>
           <input
-            type="text"
+            type="password"
             name="password2"
             value={password2}
             onChange={handleChange}
           ></input>
         </p>
-        <button type="submit">Sign Up</button>
+        <button type="submit" id={styles.signBT}>
+          Sign Up
+        </button>
       </form>
     </div>
   );

@@ -5,7 +5,7 @@ import Signup from "./components/Signup";
 import Login from "./components/Login";
 import styles from "./css/App.module.css";
 import "./css/reset.css";
-import CustomHome from "./components/CustomHome";
+import CustomHome1130 from "./components/CustomHome1130";
 
 const App = () => {
   return (
@@ -14,7 +14,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/userHome" element={<CustomHome />} />
+        <Route path="/userHome" element={<CustomHome1130 />} />
       </Routes>
     </div>
   );
